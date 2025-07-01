@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Custom Text Field Widget - Provides consistent text input styling
-/// This widget wraps TextFormField with custom styling and validation
+
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String labelText;

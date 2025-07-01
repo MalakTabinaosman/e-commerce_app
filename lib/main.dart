@@ -3,48 +3,40 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
 
-// Core imports
 import 'core/constants/app_constants.dart';
 import 'core/theme/app_theme.dart';
 
-// Data services
 import 'data/services/api_service.dart';
 import 'data/services/database_service.dart';
 
-// Cubit imports
+
 import 'cubit/auth/auth_cubit.dart';
 import 'cubit/product/product_cubit.dart';
 import 'cubit/cart/cart_cubit.dart';
 import 'cubit/theme/theme_cubit.dart';
 
-// Screen imports
+
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/register_screen.dart';
 import 'screens/home/home_screen.dart';
 
-/// Main function - Entry point of the application
-/// This function initializes Firebase and runs the Flutter app
 void main() async {
-  // Ensure Flutter bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
   await Firebase.initializeApp();
 
-  // Initialize SharedPreferences
   final prefs = await SharedPreferences.getInstance();
 
-  // Run the app
   runApp(MyApp(prefs: prefs));
 }
 
-/// MyApp - Root widget of the application
-/// This widget sets up the app with Bloc providers, theme, and routing
+
 class MyApp extends StatelessWidget {
   final SharedPreferences prefs;
 
@@ -54,7 +46,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        // Provide Firebase services
+
         Provider<FirebaseAuth>(create: (context) => FirebaseAuth.instance),
         Provider<FirebaseFirestore>(
           create: (context) => FirebaseFirestore.instance,
