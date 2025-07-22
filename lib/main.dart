@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Shopora());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Shopora extends StatelessWidget {
+  const Shopora({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
