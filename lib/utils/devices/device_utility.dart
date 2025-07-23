@@ -1,11 +1,9 @@
 import 'dart:core';
 import 'dart:io';
-import 'dart:ui_web';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:path/path.dart' as Get;
 import 'package:url_launcher/url_launcher_string.dart';
 
 class AppDeviceUtility {
@@ -37,12 +35,13 @@ class AppDeviceUtility {
     return MediaQuery.of(context).size.width;
   }
 
-  static double getPixlRatio(BuildContext context) {
+  static double getPixelRatio(BuildContext context) {
     return MediaQuery.of(context).devicePixelRatio;
   }
 
   static double getStatusBarHeight(BuildContext context) {
     return MediaQuery.of(context).padding.top;
+  
   }
 
   static double getBottomNavigationBarHight() {
