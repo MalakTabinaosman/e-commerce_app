@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/core/constants/app_colors.dart';
-import 'package:e_commerce_app/core/theme/text_theme.dart';
+import 'package:e_commerce_app/utils/constants/app_colors.dart';
+import 'package:e_commerce_app/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class TElevatedButtonTheme {
