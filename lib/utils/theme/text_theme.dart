@@ -98,4 +98,10 @@ class AppTextTheme {
       color: AppColors.darkText,
     ),
   );
+
+  static var bodyMeduim;
+
+  static var bodylarge;
+
+  static var titleMedium;
 }
