@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/authentication/login/screen/login_screen.dart';
 import 'package:e_commerce_app/features/authentication/onboarding/screens/onboarding_screen_1.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (_, __, ___) => const OnboardingScreen1(),
+            pageBuilder: (_, __, ___) =>
+                OnboardingScreen1(nextScreen: LoginScreen()),
             transitionDuration: const Duration(milliseconds: 900),
             transitionsBuilder: (_, animation, __, child) {
               return FadeTransition(opacity: animation, child: child);

@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/authentication/login/screen/login_screen.dart';
 import 'package:e_commerce_app/features/authentication/onboarding/cubit/co_onboarding.dart';
 import 'package:e_commerce_app/features/authentication/onboarding/widget/onboarding_dots_navigation.dart';
 import 'package:e_commerce_app/features/authentication/onboarding/widget/onboarding_next_button.dart';
@@ -8,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 class OnboardingScreen1 extends StatelessWidget {
-  const OnboardingScreen1({super.key});
+  const OnboardingScreen1({super.key, required LoginScreen nextScreen});
 
   @override
   Widget build(BuildContext context) {

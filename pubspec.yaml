@@ -84,6 +84,7 @@ flutter:
   assets:
 
     - assets/logo/
+    - assets/logo/social_media_logos/
     - assets/animation/
     
 

@@ -7,11 +7,12 @@ class AppColors {
   static const Color secondary = Color(0xFFFFD56F);
   static const Color accent = Color(0xFF4ECCA3);
   static const Color background = Color(0xFFF8F8F8);
-  static const Color card = Colors.white;
-  static const Color text = Color(0xFF2C3333);
+  static const Color card = Color.fromRGBO(255, 255, 255, 1);
+  static const Color text = Color.fromARGB(255, 84, 97, 97);
   static const Color error = Color(0xFFFF6B6B);
   static const Color success = Color(0xFF5FD068);
   static const Color white = Colors.white;
+  static const Color grey = Colors.grey;
 
   // Dark Theme Colors
   static const Color darkPrimary = Color(0xFF4ECCA3);
@@ -23,4 +24,5 @@ class AppColors {
   static const Color darkSuccess = Color(0xFF5FD068);
   static const Color darkSecondary = Color(0xFFFFD56F);
   static const Color dark = Color(0xFF1F1F1F);
+  static const Color darkGrey = Color.fromARGB(179, 208, 208, 208);
 }

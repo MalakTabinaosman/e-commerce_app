@@ -2,6 +2,7 @@ import 'package:e_commerce_app/app.dart';
 import 'package:e_commerce_app/features/authentication/splash/splash_screen.dart';
 import 'package:e_commerce_app/utils/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   runApp(const Shopora());
@@ -12,7 +13,9 @@ class Shopora extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return
+    // Uncomment the following lines if you want to use named routes
+    GetMaterialApp(
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
