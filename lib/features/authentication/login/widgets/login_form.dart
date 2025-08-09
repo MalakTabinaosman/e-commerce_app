@@ -19,18 +19,21 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         children: [
           TextFormField(
-            decoration: const InputDecoration(
-              labelText: AppStrings.email,
+            decoration: InputDecoration(
+              //labelText: AppStrings.email,
+              /* labelStyle: TextStyle(
+                color: dark ? AppColors.darkText : AppColors.text,
+              ),*/
               hintText: 'Enter your email',
-              contentPadding: EdgeInsets.only(left: 25),
-              border: OutlineInputBorder(),
+              contentPadding: const EdgeInsets.only(left: 25),
+              border: const OutlineInputBorder(),
             ),
           ),
           SizedBox(height: size.height * 0.02),
           TextFormField(
             obscureText: _obscureText,
             decoration: InputDecoration(
-              labelText: AppStrings.password,
+              //  labelText: AppStrings.password,
               hintText: 'Enter your password',
               contentPadding: EdgeInsets.only(left: 25),
 
@@ -66,18 +69,18 @@ class _LoginFormState extends State<LoginForm> {
                   color: Color.fromARGB(255, 68, 68, 68),
                 ),
               ),
-              SizedBox(width: size.width * 0.21),
+              SizedBox(width: size.width * 0.09),
 
               TextButton(
                 onPressed: () {},
                 child: const Text(
                   AppStrings.forgotPassword,
-                  style: TextStyle(color: AppColors.primary, fontSize: 13),
+                  style: TextStyle(color: AppColors.primary, fontSize: 14),
                 ),
               ),
             ],
           ),
-          SizedBox(height: size.height * 0.04),
+          SizedBox(height: size.height * 0.02),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(

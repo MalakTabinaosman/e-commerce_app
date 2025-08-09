@@ -1,17 +1,14 @@
-
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
-import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 
-class loginDivider extends StatelessWidget {
-  const loginDivider({
-    super.key,
-  });
+class LoginDivider extends StatelessWidget {
+  const LoginDivider({super.key, required this.text});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 40,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,9 +20,9 @@ class loginDivider extends StatelessWidget {
               endIndent: 5,
             ),
           ),
-    
+
           Text(
-            AppStrings.orLoginInWith,
+            text,
             style: TextStyle(color: AppColors.grey, fontSize: 15),
           ),
           Flexible(
@@ -41,4 +38,3 @@ class loginDivider extends StatelessWidget {
     );
   }
 }
-

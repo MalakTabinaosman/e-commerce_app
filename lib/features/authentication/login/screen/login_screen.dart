@@ -2,6 +2,7 @@ import 'package:e_commerce_app/features/authentication/login/widgets/login_divid
 import 'package:e_commerce_app/features/authentication/login/widgets/login_footer.dart';
 import 'package:e_commerce_app/features/authentication/login/widgets/login_form.dart';
 import 'package:e_commerce_app/features/authentication/login/widgets/login_header.dart';
+import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:e_commerce_app/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 
@@ -23,10 +24,10 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
-            top: size.height * 0.1,
-            bottom: size.height * 0.05,
-            right: size.width * 0.08,
-            left: size.width * 0.08,
+            top: size.height * 0.08,
+            bottom: size.height * 0.02,
+            right: size.width * 0.05,
+            left: size.width * 0.05,
           ),
           child: Column(
             children: [
@@ -35,8 +36,10 @@ class _LoginScreenState extends State<LoginScreen> {
               const LoginForm(),
 
               SizedBox(height: size.height * 0.04),
-              loginDivider(),
-              SizedBox(height: size.height * 0.03),
+              LoginDivider(text: AppStrings.orLoginInWith,
+                
+              ),
+              SizedBox(height: size.height * 0.01),
               LoginFooter(size: size),
             ],
           ),

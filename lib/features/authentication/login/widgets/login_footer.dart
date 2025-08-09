@@ -1,55 +1,57 @@
+import 'package:e_commerce_app/features/authentication/login/widgets/social_media_buttons.dart';
+import 'package:e_commerce_app/features/authentication/signup/screen/signup.dart';
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
+import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
-class LoginFooter extends StatelessWidget {
+class LoginFooter extends StatefulWidget {
   const LoginFooter({super.key, required this.size});
-
   final Size size;
 
   @override
+  State<LoginFooter> createState() => _LoginFooterState();
+}
+
+class _LoginFooterState extends State<LoginFooter> {
+  @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+    final size = MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+
         children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.grey, width: 0.1),
-              // borderRadius: BorderRadius.circular(30),
-            ),
-            child: IconButton(
-              icon: Image.asset(
-                'assets/logo/social_media_logos/google_logo.png',
-                height: 30,
-                width: 30,
-                fit: BoxFit.cover,
+          SocialMediaButtons(size: size),
+          SizedBox(height: size.height * 0.03),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                AppStrings.dontHaveAccount,
+                style: TextStyle(color: AppColors.grey, fontSize: 16),
               ),
-              onPressed: () {
-                // Handle Google login
-              },
-            ),
-          ),
-          SizedBox(width: size.width * 0.05),
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.grey, width: 0.1),
-              //  borderRadius: BorderRadius.circular(30),
-            ),
-            child: IconButton(
-              icon: Image.asset(
-                'assets/logo/social_media_logos/facebook_logo.png',
-                height: 30,
-                width: 30,
-                fit: BoxFit.cover,
+              // SizedBox(width: size.width * 0.01),
+              TextButton(
+                onPressed: () {
+                  Get.offAll(() => Signup());
+                },
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    color: AppColors.primary,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-              onPressed: () {
-                // Handle Facebook login
-              },
-            ),
+            ],
           ),
         ],
       ),
     );
   }
 }
+
+

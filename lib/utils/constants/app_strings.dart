@@ -23,6 +23,12 @@ class AppStrings {
   static const dontHaveAccount = "Don't have an account?";
   static const rememberMe = "Remember Me";
   static const orLoginInWith = "Or login in with";
+  static const firstName = "First Name";
+  static const lastName = "Last Name";
+  static const phone = "Phone Number";
+  static const agreeToPrivacyPolicy =
+      "I agree to the Privacy Policy and Terms of use";
+  static const orSigninUpWith = "Or sign up with";
 
   // Home
   static const homeTitle = "Home";

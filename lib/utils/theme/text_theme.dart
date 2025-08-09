@@ -11,7 +11,7 @@ class AppTextTheme {
       color: AppColors.text,
     ),
     headlineMedium: const TextStyle().copyWith(
-      fontSize: 24,
+      fontSize: 17,
       fontWeight: FontWeight.w600,
       color: AppColors.text,
     ),

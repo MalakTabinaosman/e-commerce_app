@@ -14,7 +14,7 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(11.0),
       child: Column(
         children: [
           Lottie.asset(
@@ -30,7 +30,7 @@ class Onboarding extends StatelessWidget {
           SizedBox(height: 10),
           Text(
             subtitle,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.bodySmall,
             textAlign: TextAlign.center,
           ),
         ],

@@ -7,8 +7,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingDotsNavigation extends StatelessWidget {
   const OnboardingDotsNavigation({
-    super.key, required PageController pageController,
-    
+    super.key,
+    required PageController pageController,
   });
 
   @override
@@ -17,13 +17,14 @@ class OnboardingDotsNavigation extends StatelessWidget {
     return Positioned(
       bottom: AppDeviceUtility.getBottomNavigationBarHight() + 25,
       left: 40,
-    
+
       child: SmoothPageIndicator(
-        controller: onboardingController.pageController, // Use the PageController from CoOnboarding
+        controller: onboardingController
+            .pageController, // Use the PageController from CoOnboarding
         count: 3,
         effect: ExpandingDotsEffect(
-          dotHeight: 10,
-          dotWidth: 10,
+          dotHeight: 6,
+          dotWidth: 12,
           activeDotColor: Theme.of(context).primaryColor,
         ),
       ),

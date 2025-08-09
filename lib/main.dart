@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/app.dart';
+import 'package:e_commerce_app/features/authentication/signup/screen/signup.dart';
 import 'package:e_commerce_app/features/authentication/splash/splash_screen.dart';
 import 'package:e_commerce_app/utils/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,8 @@ class Shopora extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
-        '/home': (context) => App(),
+        '/home': (context) => const App(),
+        '/signup': (context) => const Signup(),
       },
       themeMode: ThemeMode.system,
       theme: AppThemeData.lightTheme,
