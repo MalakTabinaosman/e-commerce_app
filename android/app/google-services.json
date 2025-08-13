@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "410888214625",
+    "project_id": "shopora-e-commerce-app",
+    "storage_bucket": "shopora-e-commerce-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410888214625:android:a49f5cf60f5ab32d3eb220",
+        "android_client_info": {
+          "package_name": "com.example.e_commerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIpMzQUAskc8smN7kp5lCnQc2cy_7jsG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

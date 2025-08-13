@@ -28,7 +28,7 @@ class AppStrings {
   static const phone = "Phone Number";
   static const agreeToPrivacyPolicy =
       "I agree to the Privacy Policy and Terms of use";
-  static const orSigninUpWith = "Or sign up with";
+  static const orSigninUpWith = "Or Sign Up with";
 
   // Home
   static const homeTitle = "Home";

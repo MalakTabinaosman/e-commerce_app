@@ -34,6 +34,20 @@ class _LoginFooterState extends State<LoginFooter> {
               ),
               // SizedBox(width: size.width * 0.01),
               TextButton(
+                style: ButtonStyle(
+                  surfaceTintColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                  splashFactory: NoSplash.splashFactory,
+                  shadowColor: MaterialStateProperty.all(Colors.transparent),
+                  elevation: MaterialStateProperty.all(0),
+                  backgroundColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                  foregroundColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                ),
                 onPressed: () {
                   Get.offAll(() => Signup());
                 },
@@ -53,5 +67,3 @@ class _LoginFooterState extends State<LoginFooter> {
     );
   }
 }
-
-

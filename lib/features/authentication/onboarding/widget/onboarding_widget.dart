@@ -14,13 +14,13 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(11.0),
+      padding: const EdgeInsets.only(top: 60),
       child: Column(
         children: [
           Lottie.asset(
             image,
-            width: AppHelperFunction.getScreenWidth(context) * 0.8,
-            height: AppHelperFunction.getScreenHeight(context) * 0.6,
+            width: AppHelperFunction.getScreenWidth(context) * 0.9,
+            height: AppHelperFunction.getScreenHeight(context) * 0.5,
           ),
           Text(
             title,
