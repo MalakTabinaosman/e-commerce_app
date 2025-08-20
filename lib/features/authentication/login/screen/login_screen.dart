@@ -36,9 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const LoginForm(),
 
               SizedBox(height: size.height * 0.04),
-              LoginDivider(text: AppStrings.orLoginInWith,
-                
-              ),
+              LoginDivider(text: AppStrings.orLoginInWith),
               SizedBox(height: size.height * 0.01),
               LoginFooter(size: size),
             ],

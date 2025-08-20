@@ -1,6 +1,9 @@
+import 'package:e_commerce_app/bottom_nav_bar.dart';
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
 import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -72,7 +75,23 @@ class _LoginFormState extends State<LoginForm> {
               SizedBox(width: size.width * 0.09),
 
               TextButton(
-                onPressed: () {},
+                style: ButtonStyle(
+                  surfaceTintColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                  splashFactory: NoSplash.splashFactory,
+                  shadowColor: MaterialStateProperty.all(Colors.transparent),
+                  elevation: MaterialStateProperty.all(0),
+                  backgroundColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                  foregroundColor: MaterialStateProperty.all(
+                    Colors.transparent,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/ForgetPassword');
+                },
                 child: const Text(
                   AppStrings.forgotPassword,
                   style: TextStyle(color: AppColors.primary, fontSize: 14),
@@ -84,9 +103,7 @@ class _LoginFormState extends State<LoginForm> {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {
-                // Handle login action
-              },
+              onPressed: () => Get.to(() => BottomNavBar()),
               child: const Text(AppStrings.login),
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(size.width, 50),

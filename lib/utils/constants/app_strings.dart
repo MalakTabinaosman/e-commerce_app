@@ -29,6 +29,8 @@ class AppStrings {
   static const agreeToPrivacyPolicy =
       "I agree to the Privacy Policy and Terms of use";
   static const orSigninUpWith = "Or Sign Up with";
+  static const forgetPassword = "Forget Password";
+  static const resetPassword = "Reset Password";
 
   // Home
   static const homeTitle = "Home";

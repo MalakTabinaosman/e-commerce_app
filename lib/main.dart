@@ -1,5 +1,7 @@
 import 'package:e_commerce_app/app.dart';
 import 'package:e_commerce_app/features/authentication/login/screen/login_screen.dart';
+import 'package:e_commerce_app/features/authentication/password_configration/forget_password.dart';
+import 'package:e_commerce_app/features/authentication/password_configration/reset_password.dart';
 import 'package:e_commerce_app/features/authentication/signup/screen/signup.dart';
 import 'package:e_commerce_app/features/authentication/splash/splash_screen.dart';
 import 'package:e_commerce_app/features/authentication/success_screens/screens/success_screen.dart';
@@ -25,6 +27,8 @@ class Shopora extends StatelessWidget {
     GetMaterialApp(
       initialRoute: '/',
       routes: {
+        '/resetPassword': (context) => const ResetPassword(),
+        '/ForgetPassword': (context) => const ForgetPassword(),
         '/SuccessScreen': (context) => const SuccessScreen(),
         '/VerifyEmail': (context) => const VerifyEmail(),
         '/LoginScreen': (context) => const LoginScreen(),
