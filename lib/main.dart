@@ -1,8 +1,8 @@
 import 'package:e_commerce_app/app.dart';
-import 'package:e_commerce_app/features/authentication/login/screen/login_screen.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/screen/login_screen.dart';
 import 'package:e_commerce_app/features/authentication/password_configration/forget_password.dart';
 import 'package:e_commerce_app/features/authentication/password_configration/reset_password.dart';
-import 'package:e_commerce_app/features/authentication/signup/screen/signup.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/signup/screen/signup.dart';
 import 'package:e_commerce_app/features/authentication/splash/splash_screen.dart';
 import 'package:e_commerce_app/features/authentication/success_screens/screens/success_screen.dart';
 import 'package:e_commerce_app/features/authentication/success_screens/screens/verify_email.dart';

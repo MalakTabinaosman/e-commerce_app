@@ -1,7 +1,7 @@
-import 'package:e_commerce_app/features/authentication/login/widgets/login_divider.dart';
-import 'package:e_commerce_app/features/authentication/login/widgets/login_footer.dart';
-import 'package:e_commerce_app/features/authentication/login/widgets/login_form.dart';
-import 'package:e_commerce_app/features/authentication/login/widgets/login_header.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/widgets/login_divider.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/widgets/login_footer.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/widgets/login_form.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/widgets/login_header.dart';
 import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:e_commerce_app/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';

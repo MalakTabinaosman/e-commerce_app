@@ -1,5 +1,5 @@
-import 'package:e_commerce_app/features/authentication/login/widgets/social_media_buttons.dart';
-import 'package:e_commerce_app/features/authentication/signup/screen/signup.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/login/widgets/social_media_buttons.dart';
+import 'package:e_commerce_app/features/authentication/login_signup/signup/screen/signup.dart';
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
 import 'package:e_commerce_app/utils/constants/app_strings.dart';
 import 'package:flutter/material.dart';
