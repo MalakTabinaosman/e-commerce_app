@@ -11,7 +11,7 @@ class TCheckboxTheme {
       if (states.contains(MaterialState.selected)) {
         return AppColors.white;
       }else {
-        return AppColors.dark;
+        return AppColors.darkBackground;
       }
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
@@ -29,7 +29,7 @@ class TCheckboxTheme {
       if (states.contains(MaterialState.selected)) {
         return AppColors.white;
       } else {
-        return AppColors.dark;
+        return AppColors.darkBackground;
       }
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {

@@ -25,8 +25,9 @@ class SearchBarContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 21.0),
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 3),
       child: Container(
+        height: 40,
         width: AppDeviceUtility.getScreenWidth(context),
         padding: EdgeInsets.only(
           top: 6.0,
@@ -36,29 +37,25 @@ class SearchBarContainer extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
-          color: showBackGround
-              ? (dark ? AppColors.dark : AppColors.white)
-              : Colors.transparent,
+          color: showBackGround ? AppColors.white : Colors.transparent,
           border: Border.all(
-            color: showBorder
-                ? (dark ? AppColors.dark : AppColors.white)
-                : Colors.transparent,
+            color: showBorder ? AppColors.white : Colors.transparent,
             width: 1.0,
           ),
         ),
         child: Row(
           children: [
-            Icon(icon, color: AppColors.darkGrey),
-            SizedBox(width: size.width * 0.03),
+            Icon(icon, color: AppColors.grey),
+            SizedBox(width: size.width * 0.04),
             Text(
               text,
               style: TextStyle(
-                color: AppColors.darkGrey,
+                color: AppColors.grey,
                 fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
               ),
             ),
-            SizedBox(width: size.width * 0.26),
-            Icon(icon2, color: AppColors.darkGrey),
+            SizedBox(width: size.width * 0.29),
+            Icon(icon2, color: AppColors.grey),
           ],
         ),
       ),

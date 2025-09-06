@@ -52,6 +52,7 @@ dependencies:
   iconsax: ^0.0.8
   google_sign_in: ^7.1.1
   flutter_facebook_auth: ^7.1.2
+  icons_plus: ^5.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

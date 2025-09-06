@@ -13,6 +13,7 @@ class AppColors {
   static const Color success = Color(0xFF5FD068);
   static const Color white = Colors.white;
   static const Color grey = Colors.grey;
+  static const Color lightGrey = Color.fromARGB(255, 236, 235, 235);
 
   // Dark Theme Colors
   static const Color darkPrimary = Color(0xFF1B9C85);
@@ -23,6 +24,6 @@ class AppColors {
   static const Color darkError = Color(0xFFFF6B6B);
   static const Color darkSuccess = Color(0xFF5FD068);
   static const Color darkSecondary = Color(0xFFFFD56F);
-  static const Color dark = Color(0xFF1F1F1F);
+  static const Color veryDarkGrey = Color.fromARGB(255, 44, 42, 42);
   static const Color darkGrey = Color.fromARGB(179, 208, 208, 208);
 }

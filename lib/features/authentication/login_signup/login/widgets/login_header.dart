@@ -32,7 +32,7 @@ class LoginHeader extends StatelessWidget {
             style: TextStyle(
               fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
               fontWeight: Theme.of(context).textTheme.headlineSmall?.fontWeight,
-              color: dark ? AppColors.white : AppColors.dark,
+              color: dark ? AppColors.white : AppColors.darkBackground,
             ),
           ),
         ),

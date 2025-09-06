@@ -34,7 +34,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               style: TextStyle(
                 fontSize: Theme.of(context).textTheme.headlineMedium?.fontSize,
 
-                color: isDarkMode ? AppColors.white : AppColors.dark,
+                color: isDarkMode ? AppColors.white : AppColors.darkBackground,
               ),
             ),
             SizedBox(height: size.height * 0.02),

@@ -11,7 +11,7 @@ class TTextFieldTheme {
 
     hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
     errorStyle: TextStyle().copyWith(fontStyle: FontStyle.normal),
-    floatingLabelStyle: TextStyle().copyWith(color: AppColors.dark),
+    floatingLabelStyle: TextStyle().copyWith(color: AppColors.darkBackground),
 
     filled: true,
     fillColor: Colors.white,
@@ -44,7 +44,7 @@ class TTextFieldTheme {
 
     hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
     errorStyle: TextStyle().copyWith(fontStyle: FontStyle.normal),
-    floatingLabelStyle: TextStyle().copyWith(color: AppColors.dark),
+    floatingLabelStyle: TextStyle().copyWith(color: AppColors.darkBackground),
 
     filled: true,
     fillColor: AppColors.darkCard,

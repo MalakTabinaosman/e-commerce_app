@@ -8,7 +8,7 @@ class TOutlineButtonTheme {
   static final lightOutlineButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
-      foregroundColor: AppColors.dark,
+      foregroundColor: AppColors.darkBackground,
       side: BorderSide(color: AppColors.primary),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.0)),
       textStyle: AppTextTheme.lightTextTheme.titleLarge,

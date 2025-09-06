@@ -1,11 +1,9 @@
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class SocialMediaButtons extends StatelessWidget {
-  const SocialMediaButtons({
-    super.key,
-    required this.size,
-  });
+  const SocialMediaButtons({super.key, required this.size});
 
   final Size size;
 
@@ -20,12 +18,9 @@ class SocialMediaButtons extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
           ),
           child: IconButton(
-            icon: Image.asset(
-              'assets/logo/social_media_logos/google_logo.png',
-              height: 30,
-              width: 30,
-              fit: BoxFit.cover,
-            ),
+            icon: Center(child: Brand(Brands.google)),
+            padding: EdgeInsets.zero,
+
             onPressed: () {
               // Handle Google login
             },
@@ -33,17 +28,22 @@ class SocialMediaButtons extends StatelessWidget {
         ),
         SizedBox(width: size.width * 0.05),
         Container(
+          height: 50,
+          width: 50,
+          padding: EdgeInsets.zero,
           decoration: BoxDecoration(
             border: Border.all(color: AppColors.grey, width: 0.9),
             borderRadius: BorderRadius.circular(30),
           ),
           child: IconButton(
-            icon: Image.asset(
-              'assets/logo/social_media_logos/facebook_logo.png',
-              height: 30,
-              width: 30,
-              fit: BoxFit.cover,
+            icon: Center(
+              child: Brand(
+                Brands.facebook_f,
+                colorFilter: ColorFilter.mode(Colors.blue, BlendMode.srcIn),
+              ),
             ),
+            padding: EdgeInsets.zero,
+
             onPressed: () {
               // Handle Facebook login
             },
