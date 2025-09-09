@@ -9,17 +9,29 @@ import 'package:e_commerce_app/features/authentication/success_screens/screens/v
 import 'package:e_commerce_app/utils/theme/app_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle().copyWith(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.transparent,
+    ),
+  );
   runApp(const Shopora());
 }
 
-class Shopora extends StatelessWidget {
+class Shopora extends StatefulWidget {
   const Shopora({Key? key}) : super(key: key);
 
+  @override
+  State<Shopora> createState() => _ShoporaState();
+}
+
+class _ShoporaState extends State<Shopora> {
   @override
   Widget build(BuildContext context) {
     return

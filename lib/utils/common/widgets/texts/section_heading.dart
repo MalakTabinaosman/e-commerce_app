@@ -24,7 +24,7 @@ class SectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -43,6 +43,7 @@ class SectionHeading extends StatelessWidget {
             TextButton(
               onPressed: onPressed,
               child: Text(
+                textAlign: TextAlign.right,
                 buttonText ?? '',
                 style: TextStyle(
                   fontSize: 14,

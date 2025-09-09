@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/common/widgets/products/product_image/product_image.dart';
 import 'package:e_commerce_app/utils/common/widgets/texts/product_text.dart';
 import 'package:e_commerce_app/utils/constants/app_colors.dart';
 import 'package:e_commerce_app/utils/helpers/helper_function.dart';
@@ -15,8 +16,9 @@ class ProductCardVertical extends StatelessWidget {
         // Navigate to product details page
       },
       child: Container(
-        width: size.width * 0.47,
-        padding: const EdgeInsets.only(left: 3.0),
+        margin: const EdgeInsets.only(left: 8, right: 8),
+        width: size.width * 0.50,
+        padding: EdgeInsets.zero,
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -33,7 +35,7 @@ class ProductCardVertical extends StatelessWidget {
             // product image ,sale tag and favorite icon
             Container(
               height: 170,
-              padding: const EdgeInsets.all(10.0),
+              // padding: const EdgeInsets.all(.0),
               decoration: BoxDecoration(
                 color: dark ? AppColors.veryDarkGrey : AppColors.lightGrey,
                 borderRadius: BorderRadius.circular(15),
@@ -41,41 +43,65 @@ class ProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   // product image
-                  Center(
+                  /*Center(
                     child: Image.asset('assets/shoes.png', fit: BoxFit.contain),
+                  ),*/
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: ProductImage(
+                      imageUrl: "assets/shoes.png",
+                      applyImageRadius: 15,
+                      backgroundColor: dark
+                          ? AppColors.darkCard
+                          : AppColors.card,
+                      borderRadius: 15,
+                      padding: const EdgeInsets.all(10.0),
+                      height: 150,
+                      width: size.width * 0.60,
+                      fit: BoxFit.cover,
+                      onPressed: () {},
+                    ),
                   ),
                   // favorite icon
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: CircleAvatar(
-                      radius: 15,
-                      backgroundColor: Colors.transparent,
-                      child: Icon(
-                        Icons.favorite,
-                        color: Colors.redAccent,
-                        size: 23,
+                  Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: CircleAvatar(
+                        radius: 15,
+                        backgroundColor: Colors.transparent,
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.redAccent,
+                          size: 23,
+                        ),
                       ),
                     ),
                   ),
                   // sale tag
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 4,
-                      ),
-                      decoration: BoxDecoration(
-                        color: dark
-                            ? AppColors.darkSecondary
-                            : AppColors.secondary,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        '20%',
-                        style: TextStyle(
-                          color: AppColors.darkBackground,
-                          fontSize: 13,
+                  Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: dark
+                              ? AppColors.darkSecondary
+                              : AppColors.secondary,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          '20%',
+                          style: TextStyle(
+                            color: AppColors.darkBackground,
+                            fontSize: 13,
+                          ),
                         ),
                       ),
                     ),
@@ -124,7 +150,8 @@ class ProductCardVertical extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.normal,
                   ),
-                  const SizedBox(height: 10),
+                  //   const SizedBox(height: 13),
+                  const SizedBox(height: 13),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -161,6 +188,7 @@ class ProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
+            
           ],
         ),
       ),

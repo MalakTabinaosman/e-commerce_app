@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/features/shop/home/screen/shop_home_screen.dart';
 import 'package:e_commerce_app/features/shop/profile/screen/profile_screen.dart';
-import 'package:e_commerce_app/features/shop/search/screen/search_screen.dart';
+import 'package:e_commerce_app/features/shop/store_screen/screen/store_screen.dart';
 import 'package:e_commerce_app/features/shop/wishlist/screen/wishlist_screen.dart';
 import 'package:e_commerce_app/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
@@ -28,10 +28,7 @@ class BottomNavBar extends StatelessWidget {
           backgroundColor: dark ? Colors.black : Colors.white,
           destinations: [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
-            NavigationDestination(
-              icon: Icon(Iconsax.search_normal),
-              label: 'Search',
-            ),
+            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
             NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
             NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
           ],
@@ -44,9 +41,10 @@ class BottomNavBar extends StatelessWidget {
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [HomeScreen(),
-  SearchScreen(),
-  WishlistScreen(),
-  ProfileScreen(),
+  final screens = [
+    HomeScreen(),
+    StoreScreen(),
+    WishlistScreen(),
+    ProfileScreen(),
   ];
 }

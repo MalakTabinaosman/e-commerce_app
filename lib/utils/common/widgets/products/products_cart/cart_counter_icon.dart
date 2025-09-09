@@ -24,11 +24,13 @@ class CarCounterIcon extends StatelessWidget {
             child: Text(
               "2",
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodySmall!.apply(color: color),
+              style: Theme.of(
+                context,
+              ).textTheme.bodySmall!.copyWith(color: Colors.white),
             ),
+            alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: AppColors.darkBackground
-              ,
+              color: AppColors.darkBackground,
               borderRadius: BorderRadius.circular(100),
             ),
           ),

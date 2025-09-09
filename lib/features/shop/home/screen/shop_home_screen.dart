@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          //mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.max,
           children: [
             CurvedEdgesClipperWidget(
               child: Container(
@@ -62,31 +62,29 @@ class HomeScreen extends StatelessWidget {
             ),
 
             // section heading
-            SizedBox(
-              height: size.height * 0.04,
-              child: SectionHeading(
-                dark: dark,
-                size: size,
-                heading: 'Popular Products',
-                showActionButton: true,
-                buttonText: 'View All',
-                onPressed: () {},
-              ),
+            SectionHeading(
+              dark: dark,
+              size: size,
+              heading: 'Popular Products',
+              showActionButton: true,
+              buttonText: 'View All',
+              onPressed: () {},
             ),
+
             GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
+              physics: NeverScrollableScrollPhysics(),
               itemCount: 10,
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 15,
-                mainAxisSpacing: 15,
+                mainAxisSpacing: 16,
                 mainAxisExtent: 300,
               ),
               itemBuilder: (_, index) {
                 return ProductCardVertical();
               },
             ),
+            SizedBox(height: size.height * 0.02),
           ],
         ),
       ),
