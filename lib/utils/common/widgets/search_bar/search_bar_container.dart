@@ -7,19 +7,17 @@ import 'package:flutter/material.dart';
 class SearchBarContainer extends StatelessWidget {
   const SearchBarContainer({
     super.key,
-    required this.dark,
     required this.size,
     required this.text,
     required this.icon,
     required this.icon2,
-    required this.showBackGround,
-    required this.showBorder,
+    required this.showBackGroundColor,
+    required this.showBorderColor,
   });
   final String text;
   final IconData icon, icon2;
-  final bool showBackGround, showBorder;
+  final Color showBackGroundColor, showBorderColor;
 
-  final bool dark;
   final Size size;
 
   @override
@@ -36,12 +34,9 @@ class SearchBarContainer extends StatelessWidget {
           right: 12.0,
         ),
         decoration: BoxDecoration(
+          color: showBackGroundColor,
           borderRadius: BorderRadius.circular(16.0),
-          color: showBackGround ? AppColors.white : Colors.transparent,
-          border: Border.all(
-            color: showBorder ? AppColors.white : Colors.transparent,
-            width: 1.0,
-          ),
+          border: Border.all(color: showBorderColor, width: 1.5),
         ),
         child: Row(
           children: [
@@ -54,7 +49,7 @@ class SearchBarContainer extends StatelessWidget {
                 fontSize: Theme.of(context).textTheme.bodyLarge?.fontSize,
               ),
             ),
-            SizedBox(width: size.width * 0.29),
+            Spacer(),
             Icon(icon2, color: AppColors.grey),
           ],
         ),

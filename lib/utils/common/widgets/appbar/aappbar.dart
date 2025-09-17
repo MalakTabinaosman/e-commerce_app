@@ -11,6 +11,7 @@ class AAppbar extends StatelessWidget implements PreferredSizeWidget {
     this.leadingIcon,
     this.actions,
     this.leadingOnPressed,
+    this.backgroundColor, this.padding = const EdgeInsets.all(8.0),
   });
 
   final Widget? title;
@@ -18,13 +19,18 @@ class AAppbar extends StatelessWidget implements PreferredSizeWidget {
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
+  final Color? backgroundColor;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: padding ?? EdgeInsets.zero,
       child: AppBar(
+        
+        backgroundColor: backgroundColor,
         automaticallyImplyLeading: false,
+        toolbarHeight: AppDeviceUtility.getAppBarHeight(),
         leading: showBackArrow
             ? IconButton(
                 icon: Icon(Iconsax.arrow_left),

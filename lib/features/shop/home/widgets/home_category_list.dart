@@ -6,10 +6,11 @@ import 'package:e_commerce_app/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesList extends StatelessWidget {
-  const CategoriesList({super.key, required this.size, required this.dark});
+  const CategoriesList({super.key, required this.size, required this.dark, this.title, this.image, });
 
   final Size size;
   final bool dark;
+  final String? title, image;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +28,8 @@ class CategoriesList extends StatelessWidget {
               child: CategoryItem(
                 size: size,
                 dark: dark,
-                title: 'type',
-                image: '1',
+                title: title,
+                image: image,
                 textColor: AppColors.white,
               ),
             );

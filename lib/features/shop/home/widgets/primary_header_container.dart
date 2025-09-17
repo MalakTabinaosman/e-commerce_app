@@ -22,6 +22,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
               radius: 480,
               child: null,
               color: AppColors.card.withOpacity(0.06),
+              borderColor: Colors.transparent,
             ),
           ),
           Positioned(
@@ -34,6 +35,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
               radius: 480,
               child: null,
               color: AppColors.card.withOpacity(0.04),
+              borderColor: Colors.transparent,
             ),
           ),
           child,

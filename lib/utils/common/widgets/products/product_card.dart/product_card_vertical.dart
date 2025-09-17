@@ -23,7 +23,7 @@ class ProductCardVertical extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: const Color.fromARGB(255, 128, 127, 127).withOpacity(0.16),
-              blurRadius: 5,
+              blurRadius: 9,
               offset: const Offset(0, 3),
             ),
           ],
@@ -46,22 +46,25 @@ class ProductCardVertical extends StatelessWidget {
                   /*Center(
                     child: Image.asset('assets/shoes.png', fit: BoxFit.contain),
                   ),*/
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: ProductImage(
-                      imageUrl: "assets/shoes.png",
-                      applyImageRadius: 15,
-                      backgroundColor: dark
-                          ? AppColors.darkCard
-                          : AppColors.card,
-                      borderRadius: 15,
-                      padding: const EdgeInsets.all(10.0),
-                      height: 150,
-                      width: size.width * 0.60,
-                      fit: BoxFit.cover,
-                      onPressed: () {},
+                  Padding(
+                    padding: const EdgeInsets.all(0.9),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: ProductImage(
+                        imageUrl: "assets/shoes.png",
+                        applyImageRadius: 15,
+                        backgroundColor: dark
+                            ? AppColors.darkCard
+                            : AppColors.card,
+                        borderRadius: 15,
+                        padding: const EdgeInsets.all(10.0),
+                        height: 150,
+                        width: size.width * 0.60,
+                        fit: BoxFit.cover,
+                        onPressed: () {},
+                      ),
                     ),
                   ),
                   // favorite icon
@@ -188,7 +191,6 @@ class ProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            
           ],
         ),
       ),

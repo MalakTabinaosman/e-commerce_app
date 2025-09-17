@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/features/shop/home/widgets/home_appbar.dart';
 import 'package:e_commerce_app/features/shop/home/widgets/curvedEdgesClipperWidget.dart';
 import 'package:e_commerce_app/features/shop/home/widgets/home_category_list.dart';
-import 'package:e_commerce_app/features/shop/home/widgets/primary_header_container.dart';
+import 'package:e_commerce_app/utils/common/widgets/appbar/aappbar.dart';
 import 'package:e_commerce_app/utils/common/widgets/products/product_card.dart/product_card_vertical.dart';
 import 'package:e_commerce_app/utils/common/widgets/search_bar/search_bar_container.dart';
 import 'package:e_commerce_app/utils/common/widgets/texts/section_heading.dart';
@@ -19,6 +19,15 @@ class HomeScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(1),
+
+        child: AAppbar(
+          padding: EdgeInsets.zero,
+          showBackArrow: false,
+          backgroundColor: Colors.transparent,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -27,36 +36,42 @@ class HomeScreen extends StatelessWidget {
               child: Container(
                 height: 340,
                 color: dark ? AppColors.darkPrimary : AppColors.primary,
-                child: PrimaryHeaderContainer(
-                  child: Column(
-                    children: [
-                      const HomeAppBar(),
+                child: Column(
+                  children: [
+                    const HomeAppBar(),
 
-                      SizedBox(height: size.height * 0.015),
+                    SizedBox(height: size.height * 0.015),
 
-                      // search bar
-                      SearchBarContainer(
-                        dark: dark,
-                        size: size,
-                        text: 'Search for products ...',
+                    // search bar
+                    SearchBarContainer(
+                      size: size,
+                      text: 'Search for products ...',
 
-                        icon: Iconsax.search_normal_1,
-                        icon2: Icons.camera_alt_outlined,
-                        showBackGround: true,
-                        showBorder: true,
-                      ),
-                      SizedBox(height: size.height * 0.04),
-                      // section heading
-                      SectionHeading(
-                        dark: dark,
-                        size: size,
-                        heading: 'Categories',
-                        showActionButton: false,
-                      ),
-                      // categories list
-                      CategoriesList(size: size, dark: dark),
-                    ],
-                  ),
+                      icon: Iconsax.search_normal_1,
+                      icon2: Icons.camera_alt_outlined,
+                      showBackGroundColor: dark
+                          ? AppColors.darkCard
+                          : AppColors.card,
+                      showBorderColor: dark
+                          ? AppColors.white
+                          : AppColors.darkBackground,
+                    ),
+                    SizedBox(height: size.height * 0.04),
+                    // section heading
+                    SectionHeading(
+                      dark: dark,
+                      size: size,
+                      heading: 'Categories',
+                      showActionButton: false,
+                    ),
+                    // categories list
+                    CategoriesList(
+                      size: size,
+                      dark: dark,
+                      title: 'type',
+                      image: '1',
+                    ),
+                  ],
                 ),
               ),
             ),

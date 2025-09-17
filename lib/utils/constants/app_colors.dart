@@ -24,6 +24,6 @@ class AppColors {
   static const Color darkError = Color(0xFFFF6B6B);
   static const Color darkSuccess = Color(0xFF5FD068);
   static const Color darkSecondary = Color(0xFFFFD56F);
-  static const Color veryDarkGrey = Color.fromARGB(255, 44, 42, 42);
+  static const Color veryDarkGrey = Color.fromARGB(255, 62, 59, 59);
   static const Color darkGrey = Color.fromARGB(179, 208, 208, 208);
 }
